@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유럽국가수도 퀴즈</title>
+    <link rel="stylesheet" href="./css/quiz1.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+     <!-- 로고 -->
+     <div id="logo_box">
+        <h1 id="logo"><a href="quizcollect.html"><span class="text-warning">유럽국가수도</span>
+            <span class="text2" style="color:violet">퀴즈</span></a>
+        </h1>
+    </div>
+
+    <!-- 퀴즈 -->
+    <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz">
+                <span class="quiz__type"></span>
+                <h2 class="quiz__question">
+                    <span class="number"></span>
+                    <div class="ask"></div>
+                </h2>
+                <div class="quiz__answer">
+                    <div class="quiz__selects">
+                        <label for="select1">
+                            <input type="radio" id="select1" class="select" name="select" value="1" >
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select2">
+                            <input type="radio" id="select2" class="select" name="select" value="2" >
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select3">
+                            <input type="radio" id="select3" class="select" name="select" value="3" >
+                            <span class="choice"></span>
+                        </label>    
+                        <label for="select4">
+                            <input type="radio" id="select4" class="select" name="select" value="4" >
+                            <span class="choice"></span>
+                        </label>
+                    </div>
+                    <div class="result"></div>
+                    <button class="confirm"> 다음 문제 ≫</button>
+                    <a class="home" href="quizcollect.html">
+                        <span id="sp1">수</span> 
+                        <span id="sp2">고</span> 
+                        <span id="sp3">하</span> 
+                        <span id="sp4">셨</span> 
+                        <span id="sp5">습</span> 
+                        <span id="sp6">니</span> 
+                        <span id="sp7">다</span> 
+                         홈으로
+                     </a>
+                </div>
+            </div>
+        </div>
+        <!-- 푸터 -->
+        <footer>
+            <div id="foot_box">
+                <p id="p1">제작자 : 김판길 </p>
+                <p>이메일 : pak_stella@naver.com</p>
+                <p>2023.04.07</p>
+                <a href="https://twitter.com/?lang=ko"><img src="./img/twitter.png"></a>
+                <a href="https://facebook.com"><img src="./img/facebook.png"></a>
+                <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk?lang=ko"><img src="./img/kakaotalk.png"></a>
+            </div>
+        </footer>
+    </main>
+    <script>
+            const quizInfo = [
+            {   
+                answerNum: "첫번째 문제",
+                answerType : "포르투갈의 수도는 ?",
+                answerAsk: `<img src="./img/Quiz1/risborn.jpg">`,
+                answerChoice: [
+                    "키예프",
+                    "리스본",
+                    "로마",
+                    "모나코",
+                ],
+                answerResult: "리스본",
+                answerEx : "바다를 낀 항구도시"
+            },
+            
+            {   
+                answerNum: "두번째 문제",
+                answerType : "독일의 수도는 ?",
+                answerAsk: ` <img src="./img/Quiz1/berlin.jpg">`,
+                answerChoice: [
+                    "프라하",
+                    "베른",
+                    "산마리노",
+                    "베를린",
+                ],
+                answerResult: "베를린",
+                answerEx : "런던과 쌍벽을 이루는 클럽 문화의 중심도시"
+            },
+            {   
+                answerNum: "세번째 문제",
+                answerType : "노르웨이의 수도는 ?",
+                answerAsk: `<img src="./img/Quiz1/Oslo.jpg">`,
+                answerChoice: [
+                    "오슬로",
+                    "런던",
+                    "코펜하겐",
+                    "노르웨이",
+                ],
+                answerResult: "오슬로",
+                answerEx : "노벨평화상이 수상되는 도시"
+            },
+            {   
+                answerNum: "네번째 문제",
+                answerType : "그리스의 수도는 ?",
+                answerAsk: `<img src="./img/Quiz1/athene.jpg">`,
+                answerChoice: [
+                    "제우스",
+                    "아테네",
+                    "볼로스",
+                    "로도스",
+                ],
+                answerResult: "아테네",
+                answerEx : "고대에 건축된 수많은 유적이있는 관광도시"
+            },
+            {   
+                answerNum: "다섯번째 문제",
+                answerType : "스페인의 수도는 ?",
+                answerAsk: `<img src="./img/Quiz1/madrid.jpg">`,
+                answerChoice: [
+                    "바르셀로나",
+                    "마드리드",
+                    "발렌시아",
+                    "세비야",
+                ],
+                answerResult: "마드리드",
+                answerEx : "호날두가 있었던 축구팀의 연고지인 도시"
+            },
+        ];
+
+        // 선택자
+        const quizQuestion = document.querySelector(".quiz__question");     //문제 번호, 질문
+        const quizSelects = document.querySelector(".quiz__selects");       //객관식 보기
+        const quizName = document.querySelector(".quiz__type");
+        const quizResult = document.querySelector(".quiz__answer .result");
+        const quizConfirm = document.querySelector(".quiz__answer .confirm");
+        const quizHome = document.querySelector(".home");
+        let quizCount = 0; 
+        let answerCount = 0;
+
+        // 문제출력
+        const updateQuiz = (index) => {
+            const questionTag = `
+                <span class="type">${quizInfo[index].answerType}</span>
+                <div class="ask">${quizInfo[index].answerAsk}</div>
+            `;
+            const choiceTag = `
+                <label for="select1">
+                    <input type="radio" id="select1" class="select" name="select" value="1" >
+                    <span class="choice">${quizInfo[index].answerChoice[0]}</span>
+                </label>
+                <label for="select2">
+                    <input type="radio" id="select2" class="select" name="select" value="2" >
+                    <span class="choice">${quizInfo[index].answerChoice[1]}</span>
+                </label>
+                <label for="select3">
+                    <input type="radio" id="select3" class="select" name="select" value="3" >
+                    <span class="choice">${quizInfo[index].answerChoice[2]}</span>
+                </label>    
+                <label for="select4">
+                    <input type="radio" id="select4" class="select" name="select" value="4" >
+                    <span class="choice">${quizInfo[index].answerChoice[3]}</span>
+                </label>
+            `;
+
+            quizName.innerText = quizInfo[index].answerNum;    //기출문제 회차
+            quizQuestion.innerHTML = questionTag;           //번호, 질문
+            quizSelects.innerHTML = choiceTag;              //객관식
+            quizResult.innerHTML = quizInfo[index].answerEx;    //해설
+
+            const quizChoice = quizSelects.querySelectorAll(".choice");
+
+            for(let i=0; i<quizChoice.length; i++){
+                quizChoice[i].setAttribute("onclick","choiceSelected(this)")
+            }
+
+            // 문제, 해설 , 홈 숨기기
+            quizResult.style.display = "none";
+            quizConfirm.style.display = "none";
+            quizHome.style.display = "none";
+        };
+        updateQuiz(quizCount);
+
+        const choiceSelected = (answer) => {
+            let userAnswer = answer.textContent;        //사용자가 체크한 정답
+            let currentAnswer = quizInfo[quizCount].answerResult;  
+
+            if(userAnswer == currentAnswer){
+                answerCount++; quizResult.style.display = "block"; O();
+            } else{
+                quizResult.style.display = "block"; X();
+            }
+            quizConfirm.style.display = "block";
+        }
+
+        // 정답 확인 버튼
+        const answerQuiz = () => {
+            if(quizInfo.length -1 == quizCount){
+                quizHome.style.display = "block";
+                quizConfirm.innerHTML = "총 " + quizInfo.length +"문제 중 " + answerCount +"개를 맞추셨습니다";
+                return 0;
+            } 
+            
+            quizCount ++;
+            updateQuiz(quizCount);
+            quizView.classList.remove("like", "dislike");
+            
+            if(quizInfo.length -1 == quizCount){
+                quizConfirm.innerHTML = "모든 문제를 푸셨습니다. 확인하기";
+            } 
+        }
+        quizConfirm.addEventListener("click", answerQuiz);
+
+        function O() {
+                Swal.fire({
+                    icon: 'success',                         // Alert 타입
+                    title: '정답입니다',         // Alert 제목
+                    text: '똑똑한걸요?',  // Alert 내용
+                });
+            }
+            
+        function X() {
+                Swal.fire({
+                    icon: 'warning',                         // Alert 타입
+                    title: '오답입니다',         // Alert 제목
+                    text: '슬퍼요',  // Alert 내용
+                });
+        }
+    </script>
+</body>
+</html>

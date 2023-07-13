@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike KR L</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 6%;
+  margin-left: 12%;
+  padding-right: 50px;
+}
+
+#logo {width:100px; position: absolute;
+margin-left:40px;
+}
+#side_logo{ border:solid 2px black;
+  display:block;
+width:400px; height: 500px;
+background-image: url(./img/side_logo.jpg);
+background-size: cover;}
+
+.login-form h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.int-area {
+  
+  width: 400px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.int-area:first-child {
+  margin-top: 0;
+}
+
+.int-area input {
+  margin-left: 12%; 
+  width: 80%;
+  padding: 20px 10px 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+  outline: none;
+}
+
+.int-area label {
+  margin-left: 12%;
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  font-size: 18px;
+  transition: top 0.5s ease;
+}
+
+.int-area label.warning {
+  color: red !important;
+  animation: warning 0.3s ease;
+  animation-iteration-count: 3;
+}
+
+@keyframes warning {
+  0% {
+    transform: translateX(-8px);
+  }
+  25% {
+    transform: translateX(8px);
+  }
+  50% {
+    transform: translateX(-8px);
+  }
+  75% {
+    transform: translateX(8px);
+  }
+}
+
+.int-area input:focus + label,
+.int-area input:valid + label {
+  top: -2px;
+  font-size: 13px;
+  color: #000000;
+}
+
+.login_btn {
+  margin-top: 30px;
+}
+
+.login_btn button {
+  width: 80%;
+  height: 50px;
+  margin-left: 15%;
+  color: #fff;
+  background-color: #000000;
+  border: none;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.caption {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.caption a {
+  margin: 0 20px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+@media screen and (max-width:850px) {
+  #side_logo {width:0px; height: 0px; border: none;}
+  
+}
+
+@media screen and (max-width:300px) {
+  #logo {position: relative; left:50px;}
+  .int-area {position: relative; left:50px;
+  }
+  #id , #pw {width:200px;}
+  .login_btn{width:85%;
+  margin-left: 8%;}
+  .caption {margin-left: 8%;}
+}
+
+    </style>
+
+    
+</head>
+<body>
+  <section id="side_logo">
+    
+  </section>
+  
+    <section class="login-form">
+      <img id=logo src="./img/nike2.png">
+      <br><br><br>
+        <h1>환영합니다</h1>
+        <form action="nike_log.html" method="get">
+            <div class="int-area">
+                <input type="text" name="id" id="id" autocomplete="off" required>
+                <label for="id">이메일</label>
+            </div>
+            <div class="int-area">
+                <input type="password" name="pw" id="pw" autocomplete="off" required>
+                <label for="pw">PASSWORD</label>
+            </div>
+            <div class="login_btn">
+                <button id="btn" type="submit">로그인</button>
+                
+            </div>
+        </form>
+        <div class="caption">
+            <a href="nike.html">홈으로</a>
+            <a href="">회원가입</a>
+        </div>
+    </section>
+    </body>
+    </html>

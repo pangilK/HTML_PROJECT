@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+body {font-family: 'Noto Sans KR', sans-serif;
+background-color: black;}
+ 
+header {width: 100%; height: 200px;}
+
+a img {
+border: solid 0px white; float:left;
+width:15%; height: auto; padding-left: 20px; padding-top:20px;}
+
+#maintext {
+font-size: 13vw; font-weight: bold; width:80%;
+position: absolute; color: orange;}
+
+#logo2 {
+float:right; width: 56%; height: auto;}
+
+#sidetext  { 
+margin-top: 30px;
+font-size:30px; color: white;}
+
+#maintext , #sidetext {padding-left:20px;}
+
+#end_text{
+margin-top: 10px;
+font-size: 13vw; float:left; color: white;}
+
+/* 반응형 웹 */
+@media screen and (max-width:1200px) {
+header {height: 15vh;}
+
+#logo2 {display: contents;width: 100%;}
+
+#logo2 img {width:100%;}
+
+#sidetext {font-size:5vw;} }
+
+#maintext1 , #maintext2 , #maintext3 {
+    animation-name : mySlide;
+    animation-duration: 1.8s;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;}
+
+    @keyframes mySlide {
+        from {
+          left: -100px;
+          opacity: 0;
+        }
+        to {
+          left: 500px;
+          opacity: 1;
+        }
+      }

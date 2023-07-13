@@ -1,0 +1,215 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    @font-face {
+        font-family: nexon;
+        src: url(../font/NEXON\ Lv1\ Gothic\ OTF.otf);
+        }   
+
+    @font-face {
+        font-family: maplestory;
+        src: url(../font/Maplestory\ Bold.ttf);
+        }
+    /*  바디  */
+        body {
+            font-family: nexon !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-right: 6%;
+            margin-left: 12%;
+            padding-right: 50px;
+            background-image:url(../img/numbers-g10ad03de6_1920.jpg);
+        }
+    /*  로고  */
+        #logo {width:100px;
+        margin:10px
+        }
+
+    /* 사이드로고 */
+        #side_logo{ border:solid 2px black;
+            display:block;
+        width:400px; height: 520px;
+        background-image: url(../img/q1.png);
+        background-size: contain;
+        border-radius: 15px;
+        box-shadow: 2px 2px 5px;}
+    
+    /* 로그인폼 */
+        .login-form {
+            width: 400px;
+            height: 520px;
+            border:solid 2px black;
+            border-radius: 15px;
+            margin-left:3%;
+            background-color: rgba(255, 255, 255, 0.562);
+            box-shadow: 2px 2px 5px;
+        }
+        .login-form h1 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .int-area {
+            width: 400px;
+            position: relative;
+            margin-top: 20px;
+            font-family: maplestory;
+        }
+        
+        .int-area:first-child {
+            margin-top: 0;
+        }
+        
+        .int-area input {
+            margin-left: 6%; 
+            width: 80%;
+            padding: 20px 10px 10px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid black;
+            font-size: 18px;
+            outline: none;
+        }
+        
+        .int-area label {
+            margin-left: 12%;
+            position: absolute;
+            left: 10px;
+            top: 15px;
+            font-size: 18px;
+            transition: top 0.5s ease;
+        }
+        
+        .int-area input:focus + label, .int-area input:valid + label {
+            top: -2px;
+            font-size: 13px;
+            color: #000000;
+        }
+        
+        .login_btn {
+            margin-top: 30px;
+        }
+        
+        .login_btn button {
+            width: 80%;
+            height: 50px;
+            margin-left: 10%;
+            color: #fff;
+            background-color: rgba(28, 66, 236, 0.726);
+            border: none;
+            border-radius: 200px;
+            font-size: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .caption {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .caption a {
+            margin: 0 20px;
+            font-size: 15px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+    /* 반응형 웹 */
+        @media screen and (max-width:850px) {
+            #side_logo {width:0px; height: 0px; border: none;}
+            
+        }
+        
+        @media screen and (max-width:450px) {
+            .login-form{width:100%;}
+            .int-area {width:17rem;}
+           
+        }
+        
+        @media screen and (max-width:300px) {
+            
+            #id , #pw {width:6.5rem;}
+            .login_btn{width:85%;
+            margin-left: 8%;}
+            .caption a {margin:5px;}
+        }
+
+        #img1 , #img2 , #img3 , #img4 ,#img5 , #img6, #img7 , #img8 , #img9 {
+            position: absolute;
+            z-index: 1;
+            animation-name : Hissss3;
+            animation-iteration-count : infinite;
+            animation-duration : 3s;
+            animation-timing-function: linear;
+        }
+        #img1 {
+            left: 1%;
+            top: 65%;
+        }
+        #img2 {
+            left:23%;
+            top:44%;
+        } 
+        #img3 {
+            left:53%;
+            top:80%;
+        }
+        #img4 {
+            left:78%;
+            top:79%;
+        }
+        #img5 {
+            left: 66%;
+            bottom: -12%;
+        }
+        #img6 {
+            left: 17%;
+            top: 93%;
+        }
+        #img7 {
+            left:3%;
+            top:3%;
+        }
+        #img8 {
+            left:75%;
+            top:12%;
+        }
+        #img9 {
+            left:55%;
+            top:23%;
+        }
+            
+        @keyframes Hissss2 {
+            0% {
+                transform: rotate(-10deg);
+            }
+            50% {
+                transform: rotate(15deg);
+            }
+            100% {
+                transform: rotate(30deg);
+            }
+            }
+        @keyframes Hissss3 {
+            0% {
+                transform: rotate(180deg);
+            }
+            50% {
+                transform: rotate(90deg);
+            }
+            100% {
+                transform: rotate(0deg);
+            }
+            }
+           
+        @media screen and (max-width:1500px) {
+            #img1 , #img2 , #img3 , #img4 ,#img5 , #img6, #img7 , #img8 , #img9 {
+            display:none;}
+        }

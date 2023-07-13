@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="menu.css">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+        body {font-family: 'Noto Sans KR', sans-serif;}
+            
+        h2 {text-align: center; margin-top: 20px;}
+
+        #join_box {
+            border: solid 0px black; width:33%;
+            margin-left: 33%;
+            margin-top: 20px;}
+
+            #name,#id ,#pw , #pw2 {
+            height:30px; width:100%;
+            margin: 5px; border: solid 2px black; padding-left:10px;
+            border-radius: 15px; background-color: white;
+            display:inline-block;}
+
+            label {
+            display: inline-block; font-size: large;
+            width:300px; border: solid 0px black}
+
+            #btn {
+            border: solid 2px black;
+            background-color: black; color:white;
+            width:100%; height: 100px; border-radius: 20px;
+            position: relative; left:10px;
+            margin-top: 40px;
+            font-size: x-large;}
+
+            @media screen and (max-width:500px) {
+            #btn {font-size: larger;}}
+            
+    </style>
+    </head>
+    <body>
+        <header></header>
+        <form action="nike_log.html" method="get">
+
+            <h2>회원가입</h2>
+                <div id="join_box">
+
+                    <div class="int-area">
+                        <label for="name">
+                            이름</label>
+                    <input type="text" name="name" id="name" autocomplete="off"
+                    placeholder="NAME"
+                    required>
+                </div>
+                <br>
+                <div class="int-area">
+                    <label for="id">
+                        아이디</label>
+                    <input type="text" name="id" id="id" placeholder="ID"
+                    required>
+                </div>
+                <br>
+                <div class="int-area">
+                    <label for="pw">
+                        비밀번호</label><h6>영어 대소문자/숫자/특수문자 중 2가지 이상 조합,10~18자</h6>
+                        <input type="password" name="pw" id="pw" placeholder="PASSWORD"
+                        required>
+                    </div>
+                    <br>
+                <div class="int-area">
+                    <label for="pw2">비밀번호확인</label>
+                    <input type="password2" name="pw2" id="pw2" placeholder="PASSWORD"
+                        autocomplete="off" required>
+                </div>
+              
+                <div class="login_btn">
+                    <button id="btn" type="submit">Welcome, Nike</button>
+                </div>
+            </div>
+                </form>
+             
+            </body>
+        </html>

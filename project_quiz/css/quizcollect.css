@@ -1,0 +1,123 @@
+    
+    html {
+        height: 100%;
+    }  
+    body { 
+        /* background-color: rgba(137, 43, 226, 0.123) !important; */
+        background-image: url(../img/numbers-g10ad03de6_1920.jpg);
+        font-family: maplestory !important;
+        }
+    @font-face {
+        font-family: maplestory;
+        src: url(../font/Maplestory\ Bold.ttf);
+        }
+    @font-face {
+        font-family: nexon;
+        src: url(../font/NEXON\ Lv1\ Gothic\ OTF.otf);
+        }   
+    /* 로고 */
+    #logo {
+        text-align: center !important;
+        margin-left:8%; margin-top:50px;
+        width: 80%;
+        display: inline-block;
+        text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+        }
+        #logo a  {
+            text-decoration: none;
+            color: black;
+            } 
+
+        .text-warning , .text2 {
+            display: inline-block;
+            animation-name : Hissss;
+            animation-iteration-count : infinite;
+            animation-duration : 2s;
+            animation-timing-function: linear;
+            font-size:3rem;
+            }
+
+    @keyframes Hissss {
+        0% {
+            transform: rotate(-10deg);
+        }
+        50% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(-10deg);
+        }
+        }
+
+    /* 로그인과 소개페이지 */
+    #login_box{
+        width: 100%;
+        display: inline-block;
+        list-style-type: none;
+        text-align: center;
+    }
+        #login , #introduce {
+            font-size: 2.5rem;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.486);
+        }
+        #login li , #introduce li {
+            display: inline; margin: 2rem;
+        }
+    /* 퀴즈소개 */
+    main {
+        margin-top: 50px;
+    }
+        .quiz1 , .quiz2 , .quiz3{
+            float:right;
+        } 
+        #quizText1 , #quizText2 , #quizText3 {
+            text-align: center;
+        }
+        #quizlink {
+            text-decoration: none;
+            color:white;
+            text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+        }
+        .mt-5 {
+            text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+        }
+
+
+
+
+
+    /* 푸터 */
+    #foot_box {
+        border: solid 2px black;
+        height: 120px;
+        margin:auto; margin-top:100px;
+        background-color: black;
+    }
+        #foot_box p {
+            font-size:1.5rem;
+            color:white;
+            margin:0px;
+        }
+        #p1 {
+            margin-top:10px;
+        }
+    
+        #foot_box a {
+            float:right;
+            position: relative;
+            bottom:25px;
+        }
+        #foot_box a img{
+            width: 2rem;
+        }
+    /* 반응형 웹 */
+    @media screen and (min-width:1100px){
+        #quizText1 , #quizText2 , #quizText3 {
+            width:42%;}
+    }
+    @media screen and (max-width:500px){
+        .quiz1 , .quiz2 , .quiz3 {
+            width:100%;}
+    }
+    

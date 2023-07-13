@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재미있게 즐기는 퀴즈</title>
+    <link rel="stylesheet" href="./css/home.css" >
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script src="./js/home.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+    <!-- 로고 -->
+    <div id="logo_box">
+        <h1 id="logo"><a href="home.html"><span class="text-warning">심심풀이</span>
+            <span>하고싶을땐 여기</span>
+            <span class="text2" style="color:violet">퀴즈</span>
+            <span>가 한곳에</span>
+        </h1>
+    </div>
+
+    <!-- 로그인과 소개  -->
+    <div id="login_box">
+        <a href="login.html" id="login"><li>로그인</li></a>
+        <a href="introduce.html" id="introduce"><li>소개</li></a>
+    </div>
+
+    <!-- 간단한 소개 -->
+    <main>
+        <div id="intro">
+            꽁꽁 얼어버린 신발을 소가 신으면 ? 정답은 4글자 !
+            <br>..
+            <br>
+            두구두구 소신발언 ! 하하하하하
+            <br>
+            어때요 ? 재밌었나요 ? 재미없었다고요 ?
+            <br>
+            이 페이지엔 더욱 많은 퀴즈가 있으니 재밌는걸 찾아서 즐겨보세요 !
+        </div>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" style="text-align:center;" >
+              <div class="carousel-item active">
+                  <img src="./img/qmain.png" class="img-fluid" alt="...">
+                  <h1><span class="text-warning">퀴즈</span>를 즐겨보세요</h1>
+                </div>
+              <div class="carousel-item">
+                <br>
+                <h3>아래 그림의 제목은 무엇일까요 ?</h3>
+                <img src="./img/q1-removebg-preview.png" class="img-fluid" alt="...">
+              </div>
+              <div class="carousel-item">
+                <br><br><br><br><br><br><br>
+                <h1>이 외에도 더 많은 <span class="text-warning">퀴즈</span>가 있으니</h1>
+                <br>
+                <h1>밑에 <span class="text2" style="color:blue">모음</span>으로 들어가</h1>
+                <br>
+                <h1>즐겨주세요 !</h1>
+                <br><br><br><br><br>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+    <!-- 퀴즈모음으로 이동 -->
+        <div id="quizCollect">
+            <a href="quizcollect.html"><h3>퀴즈 모음으로 이동하기</h3></a>
+        </div>
+    </main>
+
+
+    <!-- 공유하기 -->
+    <section>
+        <h3>공유하기 <span id="">👉</span> 
+            <a id="kakao-link-btn" href="javascript:">
+                <img src="./img/kakaotalk.png">    
+            </a>
+            <a href="javascript:shareFacebook();">
+                <img src="./img/facebook.png">
+            </a>
+            <a href="javascript:shareTwitter();">
+                <img src="./img/twitter.png">
+            </a>
+        </h3>
+    </section>
+
+    <script type='text/javascript'>
+        Kakao.init('b2bd16fe65fd5f0b557af0f87bf5cd29');
+        Kakao.Link.createDefaultButton({
+          container : '#kakao-link-btn',
+          objectType: 'feed',
+          content: {
+            title : '퀴즈모음소개',
+            description: '퀴즈',
+            imageUrl: '',
+            link: {
+              mobileWebUrl : 'https://developers.kakao.com',
+              webUrl : 'https://developers.kakao.com'
+            }
+          },
+          social: {
+            likeCount: 286,
+            commentCount: 45,
+            sharedCount: 845
+          },
+          buttons: [
+            {
+              title: '웹으로 보기',
+              link: {
+                mobileWebUrl: 'https://developers.kakao.com',
+                webUrl: 'https://developers.kakao.com'
+              }
+            },
+            {
+              title: '앱으로 보기',
+              link: {
+                mobileWebUrl: 'https://developers.kakao.com',
+                webUrl: 'https://developers.kakao.com'
+              }
+            }
+          ]
+        });
+        
+        function shareFacebook() {
+          let sendUrl = "http://127.0.0.2:5500/project_quiz/home.html"; 
+          window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+          }
+        function shareTwitter() {
+          let sendUrl = "http://127.0.0.2:5500/project_quiz/home.html"; 
+          window.open("https://twitter.com/intent/tweet?text="+ "&url=" + sendUrl);
+          }
+    </script>
+  
+    <img src="./img/null.png" id="img1">
+    <img src="./img/null4.png" id="img2">
+    <img src="./img/null2.png" id="img3">
+    <img src="./img/null4.png" id="img4">
+    <img src="./img/null.png" id="img5">
+    <img src="./img/null4.png" id="img6">
+    <img src="./img/null2.png" id="img7">
+    <img src="./img/null2.png" id="img8">
+    <img src="./img/null.png" id="img9">
+
+    <footer>
+    <div id="foot_box">
+        <p id="p1">제작자 : 김판길 </p>
+        <p>이메일 : pak_stella@naver.com</p>
+        <p>2023.04.07</p>
+        <a href="https://twitter.com/?lang=ko"><img src="./img/twitter.png"></a>
+        <a href="https://facebook.com"><img src="./img/facebook.png"></a>
+        <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk?lang=ko"><img src="./img/kakaotalk.png"></a>
+    </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

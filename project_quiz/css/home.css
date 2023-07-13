@@ -1,0 +1,238 @@
+    
+    html {
+        height: 100%;
+    }  
+    body { 
+        /* background-color: rgba(137, 43, 226, 0.123) !important; */
+        background-image: url(../img/numbers-g10ad03de6_1920.jpg);
+        font-family: maplestory !important;
+        }
+    @font-face {
+        font-family: maplestory;
+        src: url(../font/Maplestory\ Bold.ttf);
+        }
+    @font-face {
+        font-family: nexon;
+        src: url(../font/NEXON\ Lv1\ Gothic\ OTF.otf);
+        }   
+    /* 로고 */
+    #logo {
+        text-align: center !important;
+        margin-left:8%; margin-top:50px;
+        width: 80%;
+        display: inline-block;
+        text-shadow: -1px 0px black, 0px 1px black, 1px 0px black, 0px -1px black;
+        }
+        #logo a  {
+            text-decoration: none;
+            color: black;
+            } 
+
+        .text-warning , .text2 {
+            display: inline-block;
+            animation-name : Hissss;
+            animation-iteration-count : infinite;
+            animation-duration : 2s;
+            animation-timing-function: linear;
+            font-size:3rem;
+            }
+
+    @keyframes Hissss {
+        0% {
+            transform: rotate(-10deg);
+        }
+        50% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(-10deg);
+        }
+        }
+
+    /* 로그인과 소개페이지 */
+    #login_box{
+        width: 100%;
+        display: inline-block;
+        list-style-type: none;
+        text-align: center;
+    }
+        #login , #introduce {
+            font-size: 2.5rem;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.486);
+        }
+        #login li , #introduce li {
+            display: inline; margin: 2rem;
+        }
+
+    /* 소개 */
+    #intro {
+        border:solid 2px rgba(0, 0, 0, 0.349); border-radius: 15px;
+        box-shadow: 2px 2px 5px;
+        background-color: rgba(255, 255, 0, 0.274);
+        width: 25rem; height: 10%;
+        margin: auto; margin-top:3vh; padding: 10px;
+        font-family: nexon !important; font-size: 1rem; font-weight: bold;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* 퀴즈소개 작성 */ 
+    .carousel-item{
+        margin-top: 50px;  
+        position: relative;
+        z-index: 2;
+        }
+        .carousel-inner{
+            width: 80% !important;
+            margin: auto;
+        }
+        .img-fluid {
+            height: 450px !important;
+        }
+       
+
+    /* 퀴즈모음 */
+        #quizCollect {
+            border: solid 0px;
+            width:60%; height: 150px;
+            margin-left : auto; margin-right: auto;  margin-top:50px; margin-bottom: 50px;
+            background-image: url(../img/quizcollect.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+            #quizCollect a {
+                width:200px !important;
+                text-decoration: none;
+                color: black;
+            }
+            
+            #quizCollect h3 {
+                text-align: center;
+                padding-top:135px;
+                font-size: 3rem;
+                /* box-shadow: 2px 2px 5px;
+                border-radius: 20px; */
+            }
+
+    /* 공유 */
+        section {
+        padding-top : 25px;
+            }
+            section h3{
+                text-align: center;
+                margin-top : 50px;}
+            h3 a {
+                text-decoration: none;
+            }
+            h3 a img{
+                width:2rem; 
+                text-decoration: none;}
+
+    /* 푸터 */
+        #foot_box {
+            border: solid 2px black;
+            height: 120px;
+            margin:auto; margin-top:100px;
+            background-color: black;
+        }
+            #foot_box p {
+                font-size:1.5rem;
+                color:white;
+                margin:0px;
+            }
+            #p1 {
+                margin-top:10px;
+            }
+        
+            #foot_box a {
+                float:right;
+                position: relative;
+                bottom:25px;
+            }
+            #foot_box a img{
+                width: 2rem;
+            }
+
+    /* 물음표들 */
+        #img1 , #img2 , #img3 , #img4 ,#img5 , #img6, #img7 , #img8 , #img9 {
+            position: absolute;
+            z-index: 1;
+            animation-name : Hissss2;
+            animation-iteration-count : infinite;
+            animation-duration : 3s;
+            animation-timing-function: linear;
+        }
+            #img1 {
+                left: 1%;
+                top: 65%;
+            }
+            #img2 {
+                left:23%;
+                top:44%;
+            }
+            #img3 {
+                left:53%;
+                top:105%;
+            }
+            #img4 {
+                left:78%;
+                top:79%;
+            }
+            #img5 {
+                left: 66%;
+                bottom: -12%;
+            }
+            #img6 {
+                left: 17%;
+                top: 93%;
+            }
+            #img7 {
+                left:3%;
+                top:3%;
+            }
+            #img8 {
+                left:75%;
+                top:12%;
+            }
+            #img9 {
+                left:55%;
+                top:23%;
+            }
+        
+    @keyframes Hissss2 {
+        0% {
+            transform: rotate(-10deg);
+        }
+        50% {
+            transform: rotate(15deg);
+        }
+        100% {
+            transform: rotate(30deg);
+        }
+        }
+    @keyframes Hissss3 {
+        0% {
+            transform: rotate(180deg);
+        }
+        50% {
+            transform: rotate(90deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+        }
+       
+    @media screen and (max-width:1500px) {
+        #img1 , #img2 , #img3 , #img4 ,#img5 , #img6, #img7 , #img8 , #img9 {
+        display:none;}
+    }
+        
+        
+
+
+    
+
+ 

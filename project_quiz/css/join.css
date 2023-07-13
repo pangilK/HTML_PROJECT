@@ -1,0 +1,57 @@
+    body{
+        font-family: maplestory !important;
+        background-image: url(../img/numbers-g10ad03de6_1920.jpg);
+    }
+    @font-face {
+        font-family: maplestory;
+        src: url(../font/Maplestory\ Bold.ttf);
+        }
+    @font-face {
+        font-family: nexon;
+        src: url(../font/NEXON\ Lv1\ Gothic\ OTF.otf);
+        }
+    /* 로고 */
+    #logo {
+        margin: auto;
+        width:230px;
+        height: 230px;
+        background-image: url(../img/logo2.png);
+        background-repeat: no-repeat;
+    }
+        #logo a {
+            display: block;
+            width: 230px;
+            height: 230px;
+        } 
+
+    /* 회원가입텍스트 */
+    h2 {text-align: center; margin-top: 20px;}
+
+    /* 회원가입폼 */
+    #join_box {
+        border: solid 0px black; width:33%;
+        margin-left: 33%;
+        margin-top: 20px;}
+
+        #name,#id ,#pw , #pw2 {
+        height:30px; width:100%;
+        margin: 5px; border: solid 2px black; padding-left:10px;
+        border-radius: 15px; background-color: white;
+        display:inline-block;}
+
+        label {
+        display: inline-block; font-size: large;
+        width:300px; border: solid 0px black}
+
+        #btn {
+        font-family: maplestory;
+        border: solid 2px black;
+        background-color: rgba(255, 255, 0, 0.342); color:black;
+        width:100%; height: 100px; border-radius: 20px;
+        position: relative; left:10px;
+        margin-top: 40px;
+        font-size: x-large;
+        }
+          
+        @media screen and (max-width:500px) {
+        #btn {font-size: larger;}}
